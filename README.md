@@ -8,7 +8,7 @@ A beautiful, modern expense tracker with multi-currency support. Track your spen
 - 💵 **Monthly Budget Tracking** - Set your budget and visualize spending against it with progress bars and status indicators
 - 📊 **Smart Analytics** - See total spending, expense count, and average expense
 - 📈 **Budget Variations** - View current month vs. all-time expenses and get status alerts (within budget, approaching limit, over budget)
-- 🏷️ **Smart Categories** - 9 categories with emoji icons (Food, Transport, Entertainment, Shopping, Utilities, Health, Housing, Education, Other)
+- 🏷️ **Smart Categories** - 9 professional categories (Food & Dining, Transportation, Entertainment, Shopping, Utilities, Health & Medical, Housing, Education, Other)
 - 🔍 **Easy Filtering** - Filter expenses by category instantly
 - 💾 **Export & Import** - Backup and restore your expense data as JSON
 - 📱 **Fully Responsive** - Works perfectly on desktop, tablet, and mobile

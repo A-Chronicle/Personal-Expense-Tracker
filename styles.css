@@ -27,7 +27,7 @@ html {
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     min-height: 100vh;
     padding: 20px;
     color: var(--text);
@@ -67,6 +67,23 @@ header {
     font-weight: 800;
     margin-bottom: 5px;
     letter-spacing: -0.8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-header {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+}
+
+.icon-sm {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 .subtitle {
@@ -551,7 +568,7 @@ main {
 
 .expense-item {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: auto 1fr auto auto;
     align-items: center;
     gap: 14px;
     padding: 14px;
@@ -562,6 +579,15 @@ main {
     border-left: 3px solid var(--primary);
     transition: all 0.3s ease;
     animation: slideIn 0.3s ease;
+}
+
+.expense-icon {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--primary);
+    min-width: 24px;
+    text-align: center;
+    opacity: 0.8;
 }
 
 @keyframes slideIn {
@@ -842,9 +868,13 @@ footer {
     }
 
     .expense-item {
-        grid-template-columns: 1fr auto;
+        grid-template-columns: auto 1fr auto;
         gap: 10px;
         padding: 12px;
+    }
+
+    .expense-icon {
+        font-size: 1.1em;
     }
 
     .btn-delete {
@@ -896,13 +926,26 @@ footer {
     }
 
     .expense-item {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto 1fr;
         gap: 8px;
     }
 
+    .expense-icon {
+        grid-column: 1;
+    }
+
+    .expense-description {
+        grid-column: 2;
+    }
+
     .expense-amount {
+        grid-column: 2;
         text-align: left;
         min-width: unset;
+    }
+
+    .btn-delete {
+        grid-column: 2;
     }
 
     .modal-content {

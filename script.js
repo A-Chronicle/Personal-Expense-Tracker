@@ -327,9 +327,9 @@ class ExpenseTracker {
         return this.calculateTotal() / filtered.length;
     }
 
-    getCategoryEmoji(category) {
+    getCategoryIcon(category) {
         const found = CONFIG.CATEGORIES.find((c) => c.name === category);
-        return found ? found.emoji : '📌';
+        return found ? found.icon : '◈';
     }
 
     formatDate(dateString) {
@@ -375,16 +375,12 @@ class ExpenseTracker {
 
                 return `
                     <div class="expense-item">
+                        <div class="expense-icon">${this.getCategoryIcon(expense.category)}</div>
                         <div class="expense-info">
-                            <div class="expense-description">
-                                <span>${this.getCategoryEmoji(expense.category)}</span>
-                                <div>
-                                    <div>${expense.description}</div>
-                                    <div class="expense-meta">
-                                        ${this.formatDate(expense.date)}
-                                        ${expense.currency !== this.currentCurrency ? `(${originalCurrency}${formatCurrencyAmount(expense.amount, expense.currency)})` : ''}
-                                    </div>
-                                </div>
+                            <div class="expense-description">${expense.description}</div>
+                            <div class="expense-meta">
+                                ${this.formatDate(expense.date)}
+                                ${expense.currency !== this.currentCurrency ? `(${originalCurrency}${formatCurrencyAmount(expense.amount, expense.currency)})` : ''}
                             </div>
                         </div>
                         <div class="expense-amount">${this.formatAmount(displayAmount)}</div>

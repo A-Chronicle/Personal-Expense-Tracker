@@ -17,15 +17,15 @@ const CONFIG = {
   },
 
   CATEGORIES: [
-    { name: 'Food', emoji: '🍔' },
-    { name: 'Transport', emoji: '🚗' },
-    { name: 'Entertainment', emoji: '🎬' },
-    { name: 'Shopping', emoji: '🛍️' },
-    { name: 'Utilities', emoji: '⚡' },
-    { name: 'Health', emoji: '🏥' },
-    { name: 'Housing', emoji: '🏠' },
-    { name: 'Education', emoji: '📚' },
-    { name: 'Other', emoji: '📌' },
+    { name: 'Food', icon: '◆' },
+    { name: 'Transport', icon: '▴' },
+    { name: 'Entertainment', icon: '■' },
+    { name: 'Shopping', icon: '●' },
+    { name: 'Utilities', icon: '✦' },
+    { name: 'Health', icon: '✚' },
+    { name: 'Housing', icon: '⌂' },
+    { name: 'Education', icon: '◇' },
+    { name: 'Other', icon: '◈' },
   ],
 
   STORAGE_KEYS: {
