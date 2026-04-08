@@ -1,0 +1,19 @@
+{
+  "name": "personal-expense-tracker",
+  "version": "2.0.0",
+  "description": "A beautiful personal expense tracker with multi-currency support",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000"
+  },
+  "keywords": [
+    "expense",
+    "tracker",
+    "budget",
+    "finance",
+    "multi-currency",
+    "personal"
+  ],
+  "author": "",
+  "license": "MIT"
+}
