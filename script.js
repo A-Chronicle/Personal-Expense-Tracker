@@ -166,14 +166,26 @@ class ExpenseTracker {
             alert('Please enter a valid budget amount');
             return;
         }
-        this.monthlyBudget = amount;
-        localStorage.setItem(CONFIG.STORAGE_KEYS.BUDGET, amount.toString());
+        // Convert from current currency back to USD (base currency) before saving
+        const baseAmount = convertCurrency(
+            amount,
+            this.currentCurrency,
+            CONFIG.DEFAULT_CURRENCY
+        );
+        this.monthlyBudget = baseAmount;
+        localStorage.setItem(CONFIG.STORAGE_KEYS.BUDGET, baseAmount.toString());
         this.closeBudgetModal();
         this.render();
     }
 
     showBudgetModal() {
-        this.budgetInput.value = this.monthlyBudget;
+        // Convert budget from USD to current currency for display
+        const budgetInCurrentCurrency = convertCurrency(
+            this.monthlyBudget,
+            CONFIG.DEFAULT_CURRENCY,
+            this.currentCurrency
+        );
+        this.budgetInput.value = budgetInCurrentCurrency.toFixed(2);
         this.budgetSymbol.textContent = this.getCurrencySymbol();
         this.budgetModal.classList.remove('hidden');
         this.budgetInput.focus();
